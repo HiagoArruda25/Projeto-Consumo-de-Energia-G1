@@ -4,8 +4,8 @@ Projeto G1 — Linguagem de Programação: Análise e Visualização de Dados co
 **Aluno:** Hiago da Silva Arruda
 
 ## Links
-- 📊 Dashboard (Streamlit): `COLE_AQUI_O_LINK_DO_STREAMLIT`
-- 🌐 Página do projeto (GitHub Pages): `COLE_AQUI_O_LINK_DO_GITHUB_PAGES`
+- 📊 Dashboard (Streamlit): `https://haprjconsumoenergia.streamlit.app/`
+- 🌐 Página do projeto (GitHub Pages): `https://hiagoarruda25.github.io/Projeto-Consumo-de-Energia-G1/`
 
 ## Problema
 Investigar padrões de consumo de energia elétrica no Brasil: quais estados e setores consomem mais, como o consumo evolui, se há sazonalidade, se a temperatura se relaciona com o consumo e onde estão os riscos de demanda.
