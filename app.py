@@ -287,7 +287,10 @@ with abas[3]:
 with abas[4]:
     st.header("Relação entre temperatura e consumo")
     r_p = f["temperatura_media"].corr(f["consumo_mwh"])
-    r_s = f["temperatura_media"].corr(f["consumo_mwh"], method="spearman")
+    r_s = (
+    f["temperatura_media"].rank()
+    .corr(f["consumo_mwh"].rank())
+    )
     k1, k2 = st.columns(2)
     k1.metric("Correlação de Pearson", f"{r_p:.3f}".replace(".", ","))
     k2.metric("Correlação de Spearman", f"{r_s:.3f}".replace(".", ","))
