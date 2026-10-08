@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consumo de Energia Elétrica no Brasil — Projeto G1</title>
+<style>
+  :root{--bg:#0f172a;--card:#1e293b;--txt:#e2e8f0;--mut:#94a3b8;--acc:#fbbf24}
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+  header{padding:64px 20px;text-align:center;background:linear-gradient(135deg,#1e3a8a,#0f172a)}
+  header h1{margin:0 0 8px;font-size:2.2rem} header p{color:var(--mut);max-width:760px;margin:8px auto}
+  .btns{margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{background:var(--acc);color:#111;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none}
+  .btn.sec{background:transparent;color:var(--txt);border:1px solid var(--mut)}
+  main{max-width:1000px;margin:0 auto;padding:32px 20px} section{margin-bottom:48px}
+  h2{color:var(--acc);border-bottom:1px solid #334155;padding-bottom:6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .card{background:var(--card);border-radius:10px;padding:16px} .card b{display:block;font-size:1.4rem;color:var(--acc)}
+  .card span{color:var(--mut);font-size:.9rem}
+  figure{margin:24px 0;background:var(--card);border-radius:10px;padding:12px} figure img{width:100%;height:auto;border-radius:6px;background:#fff}
+  figcaption{color:var(--mut);font-size:.95rem;margin-top:8px}
+  ul{padding-left:20px} .warn{background:#422006;border-left:4px solid var(--acc);padding:12px 16px;border-radius:6px}
+  footer{text-align:center;color:var(--mut);padding:24px;border-top:1px solid #334155}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚡ Consumo de Energia Elétrica no Brasil</h1>
+  <p>Análise e visualização de dados de 2015 a 2024 — estados, setores, sazonalidade, temperatura e demanda de pico.</p>
+  <p>Projeto G1 · Linguagem de Programação · Hiago da Silva Arruda</p>
+  <div class="btns">
+    <a class="btn" href="COLE_AQUI_O_LINK_DO_STREAMLIT">Abrir dashboard</a>
+    <a class="btn sec" href="COLE_AQUI_O_LINK_DO_GITHUB">Código no GitHub</a>
+  </div>
+</header>
+<main>
+  <section>
+    <h2>Problema</h2>
+    <p>O consumo de energia reflete atividade econômica, crescimento urbano e eficiência. Entender padrões de demanda, sazonalidade e picos ajuda a antecipar riscos de sobrecarga do sistema elétrico. O projeto responde: quais estados e setores consomem mais? O consumo cresceu? Há sazonalidade? A temperatura explica o consumo?</p>
+  </section>
+  <section>
+    <h2>Base de dados</h2>
+    <div class="grid">
+      <div class="card"><b>4.440</b><span>registros</span></div>
+      <div class="card"><b>14</b><span>colunas</span></div>
+      <div class="card"><b>20</b><span>estados</span></div>
+      <div class="card"><b>5</b><span>setores de consumo</span></div>
+      <div class="card"><b>2015–2024</b><span>período</span></div>
+      <div class="card"><b>≈ 165,7 mi MWh</b><span>consumo total</span></div>
+    </div>
+    <p>Dataset <strong>simulado</strong> fornecido pelo professor.</p>
+  </section>
+  <section>
+    <h2>Tecnologias</h2>
+    <p>Python · Pandas · NumPy · Plotly · Matplotlib · Seaborn · Streamlit · GitHub / GitHub Pages / Streamlit Community Cloud</p>
+  </section>
+  <section>
+    <h2>Principais gráficos</h2>
+    <figure><img src="imagens/01_evolucao_temporal.png" alt="Evolução temporal do consumo"><figcaption>O consumo oscila ao longo dos anos, com o menor valor anual em 2020.</figcaption></figure>
+    <figure><img src="imagens/02_ranking_estados.png" alt="Ranking de estados"><figcaption>RJ lidera no total, mas na média por registro o ranking muda (AM lidera) — a base tem número desigual de registros por estado.</figcaption></figure>
+    <figure><img src="imagens/04_setores.png" alt="Consumo por setor"><figcaption>Consumo equilibrado entre setores (diferença de cerca de 11% entre o maior e o menor).</figcaption></figure>
+    <figure><img src="imagens/05_heatmap_sazonalidade.png" alt="Heatmap de sazonalidade"><figcaption>Sem padrão sazonal estável: o mês de pico muda de ano para ano.</figcaption></figure>
+    <figure><img src="imagens/06_temperatura_consumo.png" alt="Temperatura x consumo"><figcaption>Correlação praticamente nula entre temperatura e consumo (Pearson ≈ 0).</figcaption></figure>
+    <figure><img src="imagens/07_correlacao.png" alt="Matriz de correlação"><figcaption>Matriz de correlação entre as variáveis numéricas.</figcaption></figure>
+  </section>
+  <section>
+    <h2>Conclusão</h2>
+    <ul>
+      <li>O consumo anual oscila (queda em 2020 e recuperação depois) e é bem distribuído entre os setores.</li>
+      <li>Não há sazonalidade estável nem relação entre temperatura e consumo nesta base.</li>
+      <li>Cerca de 25% dos registros estão em nível de demanda <em>Crítico</em> — pontos de atenção para o sistema.</li>
+    </ul>
+    <p class="warn"><strong>Limitação:</strong> a base é simulada e desbalanceada entre estados; ausência de correlações é um resultado esperado e não deve ser extrapolada para o sistema elétrico real.</p>
+  </section>
+</main>
+<footer>Projeto G1 · Análise e Visualização de Dados com Python</footer>
+</body>
+</html>
