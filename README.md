@@ -1,7 +1,9 @@
 # ⚡ Consumo de Energia Elétrica no Brasil (2015–2024)
 
-Projeto G1 — Linguagem de Programação: Análise e Visualização de Dados com Python (Tema 14)
-**Aluno:** Hiago da Silva Arruda
+**Projeto:** Avaliação G1 — Tema 14  
+**Disciplina:** Linguagem de Programação — Análise e Visualização de Dados com Python  
+**Aluno:** Hiago da Silva Arruda  
+**Professor:** Alexandre Neves Louzada
 
 ## Links
 - 📊 Dashboard (Streamlit): `https://haprjconsumoenergia.streamlit.app/`
